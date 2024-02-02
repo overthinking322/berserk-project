@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;                                    
+}
+
+header {
+    background-image: url('photo/09.jpg');
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #8B0000;
+    padding: 10px;
+    text-align: center;
+    display: flex; /* Добавлено свойство для создания горизонтального ряда */
+    justify-content: center; /* Добавлено свойство для выравнивания по центру */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+/* Ваш остальной CSS код... */
+
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #800000;
+}
+
+footer {
+    background-color: #8B0000;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    border: 1px solid #555;
+}
+
+
+p {
+    color: #fff;
+    line-height: 1.5;
+}
+
+a {
+    color: #8B0000; /* Цвет ссылок */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Остальной ваш CSS код... */
+
+nav button {
+    color: #040303;
+    background-color: #8B0000;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav button:hover {
+    color: #fff; /* Изменен цвет текста при наведении */
+    background-color: #000;
+}
+
+
+/* здесь стиль кнопки h2 */
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --glow-color: hsl(186, 38%, 0%); 
+}
+
+.glowing-btn {
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.35em 1em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    font-family: "Raleway", sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 0.1em; 
+    box-shadow: none; 
+    animation: bolder-flicker 2s linear infinite;
+    margin: 0.2em; 
+}
+
+
+.glowing-txt {
+    float: left;
+    margin-right:  -0.8em;
+    text-shadow: 
+        0 0 0.125em #ffffff4d,
+        0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite; 
+}
+
+.faulty-letter {
+    opacity: 0.5;
+    animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+    content: "";
+    position: absolute;
+    background: var(--glow-color);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    pointer-events: none;
+}
+
+.glowing-btn::after {
+    content: "";
+    position: absolute;
+    background: var(--glow-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+    color: inherit;  
+    text-shadow: none;
+    animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+    animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.glowing-btn:hover::before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+
+.glowing-btn:hover::after {
+    opacity: 1;
+}
+
+
+
+@keyframes faulty-flicker {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 0.1;
+    }
+    4% {
+        opacity: 0.5;
+    }
+    19% {
+        opacity: 0.5;
+
+    }
+    21% {
+        opacity: 0.1;
+
+    }
+    23% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    83% {
+        opacity: 0.4;
+    }
+    87% {
+        opacity: 1;
+    }
+}
+
+
+
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 1;
+    }
+    4% {
+        opacity: 0.1;
+    }
+    8% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
